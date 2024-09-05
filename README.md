@@ -9,6 +9,7 @@ You need to run this once just before the rebate starts (as a prior) and periodi
 
 pick your own validator/API server, as some limit the responses
 pass in your API endpoint, and your validator address.
+as setup, it will only download the first 8000 delegators, if you have more.. adjust it.
 
 ## validator-rebate
 
