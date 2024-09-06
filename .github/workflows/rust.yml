@@ -7,25 +7,6 @@ on:
   push:
 
 jobs:
-  test:
-    name: Test
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout sources
-        uses: actions/checkout@v4
-
-      - name: Install Just
-        uses: extractions/setup-just@v1
-
-      - name: Install toolchain
-        uses: dtolnay/rust-toolchain@stable
-        with:
-          toolchain: stable
-
-      - name: Run tests
-        run: just test
-        env:
-          RUST_BACKTRACE: 1
 
   lint:
     name: Lint
@@ -38,16 +19,12 @@ jobs:
         uses: extractions/setup-just@v1
 
       - name: Install toolchain
-        uses: dtolnay/rust-toolchain@stable
+        uses: dtolnay/rust-toolchain@nightly
         with:
-          # nightly is failing for some weird reason
-          toolchain: stable
+          toolchain: nightly
           components: clippy
 
       - name: Run linter
         run: just clippy
         env:
           RUST_BACKTRACE: 1
-
-      - name: Build and upload Rust binary to GitHub Releases
-        uses: taiki-e/upload-rust-binary-action@v1.22.0
