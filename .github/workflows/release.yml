@@ -1,4 +1,4 @@
-name: TestLint
+name: build
 
 permissions:
   contents: write

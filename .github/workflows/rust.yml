@@ -1,4 +1,4 @@
-name: BuildBin
+name: lint
 
 permissions:
   contents: write
