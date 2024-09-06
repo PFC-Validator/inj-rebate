@@ -18,11 +18,12 @@ as setup, it will only download the first 8000 delegators, if you have more.. ad
 
 ala
 ``
-cargo run -- prior.json out results.csv
+cargo run -- whitelist.csv prior.json out results.csv
 ``
-the first argument is the list of delegations *prior* to the rebate program. (as the rebate only applies to new delegations)
-the second argument is the directory that contains the results of the script, that you periodically ran.
-the third argument is the results file the program will write.
+the 1st argument are the whitelisted wallets. (the ones with the coupons, one per line)
+the 2nd argument is the list of delegations *prior* to the rebate program. (as the rebate only applies to new delegations)
+the 3rd argument is the directory that contains the results of the script, that you periodically ran.
+the 4th argument is the results file the program will write.
 
 it will be in the format of:
 
